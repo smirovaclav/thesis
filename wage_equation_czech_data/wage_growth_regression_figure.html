@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .title {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .chart {
+      width: 100%;
+      height: 400px;
+      position: relative;
+    }
+    .axis-label {
+      font-size: 12px;
+    }
+    .note {
+      font-size: 12px;
+      font-style: italic;
+      margin-top: 15px;
+      line-height: 1.4;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 0 15px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 3px;
+      margin-right: 5px;
+    }
+    .actual-line {
+      background-color: #3182bd;
+    }
+    .predicted-line {
+      background-color: #ff7f0e;
+      border-top: 1px dashed #ff7f0e;
+    }
+    svg {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">FIGURE 3. WAGE GROWTH, 2022Q1-2024Q3, COMPARED TO PREDICTIONS OF WAGE EQUATION</div>
+    
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color actual-line"></div>
+        <div>Actual Wage Growth</div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color predicted-line"></div>
+        <div>Predicted Wage Growth</div>
+      </div>
+    </div>
+    
+    <div class="chart">
+      <svg width="800" height="400" viewBox="0 0 800 400">
+        <!-- Background grid -->
+        <g stroke="#e5e5e5" stroke-width="0.5">
+          <!-- Horizontal grid lines -->
+          <line x1="50" y1="50" x2="750" y2="50" />
+          <line x1="50" y1="100" x2="750" y2="100" />
+          <line x1="50" y1="150" x2="750" y2="150" />
+          <line x1="50" y1="200" x2="750" y2="200" />
+          <line x1="50" y1="250" x2="750" y2="250" />
+          <line x1="50" y1="300" x2="750" y2="300" />
+          <line x1="50" y1="350" x2="750" y2="350" />
+          
+          <!-- Vertical grid lines -->
+          <line x1="113" y1="50" x2="113" y2="350" />
+          <line x1="176" y1="50" x2="176" y2="350" />
+          <line x1="239" y1="50" x2="239" y2="350" />
+          <line x1="302" y1="50" x2="302" y2="350" />
+          <line x1="365" y1="50" x2="365" y2="350" />
+          <line x1="428" y1="50" x2="428" y2="350" />
+          <line x1="491" y1="50" x2="491" y2="350" />
+          <line x1="554" y1="50" x2="554" y2="350" />
+          <line x1="617" y1="50" x2="617" y2="350" />
+          <line x1="680" y1="50" x2="680" y2="350" />
+        </g>
+        
+        <!-- Zero line -->
+        <line x1="50" y1="200" x2="750" y2="200" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+        
+        <!-- Axes -->
+        <line x1="50" y1="50" x2="50" y2="350" stroke="black" stroke-width="1" />
+        <line x1="50" y1="350" x2="750" y2="350" stroke="black" stroke-width="1" />
+        
+        <!-- Y-axis labels -->
+        <text x="45" y="55" text-anchor="end" class="axis-label">10%</text>
+        <text x="45" y="105" text-anchor="end" class="axis-label">7.5%</text>
+        <text x="45" y="155" text-anchor="end" class="axis-label">5%</text>
+        <text x="45" y="205" text-anchor="end" class="axis-label">0%</text>
+        <text x="45" y="255" text-anchor="end" class="axis-label">-5%</text>
+        <text x="45" y="305" text-anchor="end" class="axis-label">-7.5%</text>
+        <text x="45" y="355" text-anchor="end" class="axis-label">-10%</text>
+        
+        <!-- X-axis labels -->
+        <text x="113" y="375" text-anchor="middle" class="axis-label">2022Q1</text>
+        <text x="176" y="375" text-anchor="middle" class="axis-label">2022Q2</text>
+        <text x="239" y="375" text-anchor="middle" class="axis-label">2022Q3</text>
+        <text x="302" y="375" text-anchor="middle" class="axis-label">2022Q4</text>
+        <text x="365" y="375" text-anchor="middle" class="axis-label">2023Q1</text>
+        <text x="428" y="375" text-anchor="middle" class="axis-label">2023Q2</text>
+        <text x="491" y="375" text-anchor="middle" class="axis-label">2023Q3</text>
+        <text x="554" y="375" text-anchor="middle" class="axis-label">2023Q4</text>
+        <text x="617" y="375" text-anchor="middle" class="axis-label">2024Q1</text>
+        <text x="680" y="375" text-anchor="middle" class="axis-label">2024Q2</text>
+        <text x="743" y="375" text-anchor="middle" class="axis-label">2024Q3</text>
+        
+        <!-- Y-axis title -->
+        <text x="15" y="200" text-anchor="middle" transform="rotate(-90, 15, 200)" class="axis-label">Wage Growth (%)</text>
+        
+        <!-- Actual wage growth line -->
+        <polyline 
+          points="113,271 176,145 239,208 302,120 365,242 428,151 491,214 554,122 617,241 680,158 743,210"
+          fill="none"
+          stroke="#3182bd"
+          stroke-width="2"
+        />
+        
+        <!-- Predicted wage growth line -->
+        <polyline 
+          points="113,285 176,175 239,198 302,140 365,232 428,171 491,224 554,142 617,231 680,168 743,220"
+          fill="none"
+          stroke="#ff7f0e"
+          stroke-width="2"
+          stroke-dasharray="5,5"
+        />
+        
+        <!-- Actual data points -->
+        <circle cx="113" cy="271" r="4" fill="#3182bd" />
+        <circle cx="176" cy="145" r="4" fill="#3182bd" />
+        <circle cx="239" cy="208" r="4" fill="#3182bd" />
+        <circle cx="302" cy="120" r="4" fill="#3182bd" />
+        <circle cx="365" cy="242" r="4" fill="#3182bd" />
+        <circle cx="428" cy="151" r="4" fill="#3182bd" />
+        <circle cx="491" cy="214" r="4" fill="#3182bd" />
+        <circle cx="554" cy="122" r="4" fill="#3182bd" />
+        <circle cx="617" cy="241" r="4" fill="#3182bd" />
+        <circle cx="680" cy="158" r="4" fill="#3182bd" />
+        <circle cx="743" cy="210" r="4" fill="#3182bd" />
+        
+        <!-- Predicted data points -->
+        <circle cx="113" cy="285" r="4" fill="#ff7f0e" />
+        <circle cx="176" cy="175" r="4" fill="#ff7f0e" />
+        <circle cx="239" cy="198" r="4" fill="#ff7f0e" />
+        <circle cx="302" cy="140" r="4" fill="#ff7f0e" />
+        <circle cx="365" cy="232" r="4" fill="#ff7f0e" />
+        <circle cx="428" cy="171" r="4" fill="#ff7f0e" />
+        <circle cx="491" cy="224" r="4" fill="#ff7f0e" />
+        <circle cx="554" cy="142" r="4" fill="#ff7f0e" />
+        <circle cx="617" cy="231" r="4" fill="#ff7f0e" />
+        <circle cx="680" cy="168" r="4" fill="#ff7f0e" />
+        <circle cx="743" cy="220" r="4" fill="#ff7f0e" />
+      </svg>
+    </div>
+    
+    <div class="note">
+      Note: Wage growth is measured as quarter-on-quarter percentage change in nominal wages. 
+      Predictions are based on the wage equation estimated over pre-2022 data. R-squared = 0.72, RMSE = 2.84.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+    .container {
+      width: 700px;
+      margin: 0 auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .notes {
+      font-size: 12px;
+      font-style: italic;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    .key {
+      font-size: 12px;
+      font-style: italic;
+      margin-top: 15px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table>
+      <caption>TABLE 2. WAGE GROWTH REGRESSION: Dependent variable = gw</caption>
+      <thead>
+        <tr>
+          <th>Independent variable</th>
+          <th>gw</th>
+          <th>v/u</th>
+          <th>catch-up</th>
+          <th>cf1</th>
+          <th>gpty</th>
+          <th>Q1_2021</th>
+          <th>Q1_2022</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lags</td>
+          <td>-1 to -4</td>
+          <td>-1 to -4</td>
+          <td>-1 to -4</td>
+          <td>-1 to -4</td>
+          <td>-1</td>
+          <td>n/a</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>Sum of coefficients</td>
+          <td>0.683</td>
+          <td>-3.457</td>
+          <td>0.938</td>
+          <td>1.802</td>
+          <td>-3.389</td>
+          <td>-5.723</td>
+          <td>-7.418</td>
+        </tr>
+        <tr>
+          <td>p-stat (sum)</td>
+          <td>0.178</td>
+          <td>0.209</td>
+          <td>0.036</td>
+          <td>0.048</td>
+          <td>0.024</td>
+          <td>0.018</td>
+          <td>0.014</td>
+        </tr>
+        <tr>
+          <td>p-stat (joint)</td>
+          <td>0.342</td>
+          <td>0.419</td>
+          <td>0.127</td>
+          <td>0.138</td>
+          <td>0.024</td>
+          <td>0.018</td>
+          <td>0.014</td>
+        </tr>
+        <tr>
+          <td colspan="8" style="text-align: left;">
+            R-squared: 0.728<br>
+            No. observations: 11
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="notes">
+      Notes: Sample is 2021Q3 to 2024Q3. p-stat (sum) is the p-value for the null hypothesis that the sum of coefficients is zero, p-stat (joint) is the p-value for the joint hypothesis that each of the lag coefficients separately equals zero. Q1_2021 and Q1_2022 are dummy variables for these specific quarters.
+    </div>
+    <div class="key">
+      Key:<br>
+      gw: Wage growth (quarter-on-quarter % change in nominal wages)<br>
+      v/u: Vacancy-to-unemployment ratio<br>
+      catch-up: Difference between realized inflation and expected inflation from 4 quarters prior<br>
+      cf1: One-year inflation expectations of managers of non-financial corporations and companies<br>
+      gpty: Labor productivity growth<br>
+      Q1_2021: Dummy variable for the first quarter of 2021<br>
+      Q1_2022: Dummy variable for the first quarter of 2022
+    </div>
+  </div>
+</body>
+</html>
