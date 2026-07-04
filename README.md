@@ -18,20 +18,20 @@ The methodology builds directly on the theoretical and empirical inflation frame
 
 The repository is organized into four main directories corresponding to the stages of data processing and econometric modeling:
 
-* `01_data_processing/`
+* `data_processing/`
   * Python scripts for downloading, cleaning, and preparing macroeconomic data.
   * Includes time-series transformations from CZSO, CNB, ECB, and Eurostat databases, alongside the integration of the Global Supply Chain Pressure Index (GSCPI).
 
-* `02_main_bb_model/`
+* `lockdown_per_employee - Main model/`
   * The core semi-structural Bernanke-Blanchard (BB) model applied to Czech data.
   * Contains estimations for the wage equation, price equation, and short- and long-term inflation expectations, as well as impulse response functions (IRFs) and historical decompositions of inflation.
   * Implements the baseline framework and the exploratory extension incorporating the price-level gap.
 
-* `03_robustness_check_1/`
+* `lockdown_per_hour/`
   * First set of robustness checks and sensitivity analyses.
   * Evaluates alternative wage equation specifications (using compensation per hour instead of compensation per employee) and alternative labor market tightness measures (using the unemployment gap instead of the $V/U$ ratio).
 
-* `04_robustness_check_2/`
+* `other_models - alternative data/`
   * Second set of robustness checks testing system stability and lag dynamics.
   * Includes estimations and historical decompositions using the Harmonised Index of Consumer Prices (HICP) instead of the national CPI, as well as tests across different lag structures.
 
@@ -52,5 +52,3 @@ The repository is organized into four main directories corresponding to the stag
 * **Wage dynamics:** Labor market tightness contributed to wage growth, but the estimated catch-up effect is negative. Unexpected inflation did not translate into higher nominal wage growth, indicating the absence of a wage-price spiral.
 * **Price-level impact:** Specifications incorporating the price-level gap yielded no statistically significant evidence of a state-dependent multiplier effect in the transmission of external shocks across the tested specifications.
 
----
-*To run the code, we recommend using a Python environment with the packages listed in `requirements.txt`.*
