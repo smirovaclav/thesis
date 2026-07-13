@@ -39,7 +39,7 @@ The repository is organized into four main directories corresponding to the stag
 
 ## Thesis Details
 
-* The full text of the thesis is available  in **`[thesis.pdf]`**.
+* The full text of the thesis is available  in **`thesis.pdf`**.
 * **Author:** Václav Šmíro
 * **Supervisor:** PhDr. Jiří Schwarz, Ph.D.
 * **Institution:** Charles University, Faculty of Social Sciences, Institute of Economic Studies (IES FSV UK)
